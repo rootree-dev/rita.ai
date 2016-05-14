@@ -1,11 +1,43 @@
-.logo-wrapper, .down-wrapper{
+html, body{
+  height: 100%;
+}
+.background{
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-wrapper{
+  background: rgba(0,0,0,0.4);
+  height: 100%;
   text-align: center;
 }
-.logo-wrapper .logo{
-  border-radius: 8.33%;
-  margin: 40px 0px;
-  width: 200px;
+.main-wrapper:after{
+  clear:both;
+  display: block;
+  content: " ";
 }
-.down-wrapper .down-btn{
-  width: 300px;
+.main-wrapper .text-wrapper{
+  float: left;
+  width: 50%;
+  color: #fff;
+}
+.main-wrapper .text-wrapper .sub-title{
+  font-size: 30pt;
+  padding-top: 25%;
+}
+.main-wrapper .image-wrapper{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.main-wrapper .image-wrapper a{
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+.main-wrapper .image-wrapper a .phone{
+  height: 80%;
+  margin-top: 15%;
 }
