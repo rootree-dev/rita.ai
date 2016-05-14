@@ -34,7 +34,6 @@ html, body{
 }
 .main-wrapper .image-wrapper a{
   width: 100%;
-  display: block;
   height: 100%;
 }
 .main-wrapper .image-wrapper a .phone{
