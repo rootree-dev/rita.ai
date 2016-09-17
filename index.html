@@ -39,14 +39,18 @@
       ga('create', 'UA-40330748-12', 'auto');
       ga('send', 'pageview');
     </script>
+    <script src="javascripts/deeplink.min.js" type="text/javascript"></script>
     <script>
       var arya = new Arya();
-      if ( navigator.userAgent.toString().toLowerCase().indexOf("android") > -1 ) {
-        location.href = "https://play.google.com/store/apps/details?id=net.rootree.rita&hl=ko&utm_source=Website&utm_medium=Viral&utm_campaign=from_" + (arya.wallet['referrer']||"direct").toLowerCase()
-      }else if( navigator.userAgent.toString().toLowerCase().indexOf("iphone") > -1){
-        alert('1')
-        location.href = "https://itunes.apple.com/kr/app/lita/id1137994150?mt=8&u1=from_" + (arya.wallet['referrer']||"direct").toLowerCase()
-      }
+      deeplink.setup({
+          iOS: {
+              appName: "rita",
+              appId: "1137994150",
+          },
+          android: {
+              storeUrl: "https://play.google.com/store/apps/details?id=net.rootree.rita&hl=ko&utm_source=Website&utm_medium=Viral&utm_campaign=from_" + (arya.wallet['referrer']||"direct").toLowerCase()
+          }
+      });
     </script>
   </body>
 </html>
